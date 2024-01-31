@@ -13,7 +13,7 @@ const Gradients: React.FC<GradientsProps> = ({ gradients }) => {
     return (
         <Wrapper className='px-4'>
             <div className='flex flex-wrap'>{gradients.map(item =>
-                <GradientItem {...item} />
+                <GradientItem key={item.name} {...item} />
             )}</div>
         </Wrapper>
     )

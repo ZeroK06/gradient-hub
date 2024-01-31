@@ -11,7 +11,7 @@ const Navbar = () => {
                 <Logo />
                 <ul>
                     {NAVBAR.map(item =>
-                        <li>
+                        <li key={item.name}>
                             <a href={item.href}> {item.name}</a>
                         </li>
                     )}

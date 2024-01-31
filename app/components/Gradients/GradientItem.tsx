@@ -1,8 +1,10 @@
 import { GradientProps } from '@/lib/types'
-import React from 'react'
+import React, { useId } from 'react'
 import GradientColor from './GradientColor'
 
 const GradientItem: React.FC<GradientProps> = ({ colors, name }) => {
+
+
     return (
         <div className='w-[25%] min-w-[180px] p-3'>
             <div className='flex flex-col items-center gap-6 bg-white rounded-2xl p-3 shadow-[0_0_20px_20px_rgba(0,0,0,0.05)]'>
@@ -13,7 +15,7 @@ const GradientItem: React.FC<GradientProps> = ({ colors, name }) => {
                 </div>
                 <div className='w-full flex justify-center gap-2 flex-wrap'>
                     {colors.map(color =>
-                        <GradientColor color={color} />
+                        <GradientColor key={color} color={color} />
                     )}
                 </div>
             </div>
